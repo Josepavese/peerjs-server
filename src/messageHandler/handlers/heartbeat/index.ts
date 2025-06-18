@@ -17,7 +17,7 @@ export const HeartbeatHandler = (
 
     // ↳ send the ACK back to the same client
     client.send({
-      type: MessageType.HEARTBEAT,
+      event: MessageType.HEARTBEAT,
       // optional: include payload if you want to echo timestamp
       payload: { timestamp: nowTime },
     });
