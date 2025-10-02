@@ -1,6 +1,5 @@
 import { MessageType } from "../../../enums.ts";
 import type { IClient } from "../../../models/client.ts";
-import type { IMessage } from "../../../models/message.ts";
 
 /**
  * When a heartbeat comes in:
@@ -8,8 +7,7 @@ import type { IMessage } from "../../../models/message.ts";
  * 2. send back a HEARTBEAT message so clients can detect “alive” signals
  */
 export const HeartbeatHandler = (
-  client: IClient | undefined,
-  message: IMessage
+  client: IClient | undefined
 ): boolean => {
   if (client) {
     const nowTime = Date.now();
